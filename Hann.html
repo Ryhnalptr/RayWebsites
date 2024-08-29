@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RayWebsite</title>
+    <style>
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <center><button class="button" onclick="playSoundAndRedirect()">Click Me!</button></center>
+    <audio id="click-sound" src="sound.mp3"></audio>
+    
+    <script>
+        function playSoundAndRedirect() {
+            var sound = document.getElementById('click-sound');
+            sound.play();
+            sound.onended = function() {
+                window.location.href = "https://drive.google.com/drive/folders/1J9u091MCtaPYxlm5A0cNb1hoWkqdtwc8";
+            };
+        }
+    </script>
+</body>
+</html>
